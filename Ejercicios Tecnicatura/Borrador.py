@@ -1,15 +1,16 @@
-def sumatoria(num):
-    if num==1:
-        return 1
-    else:
-        return num + sumatoria(num-1)
-def factorial (n):
-    if n==1:
-        return 1
-    else:
-        return n * factorial(n-1)
-num = int(input('Numero de la sumatoria: '))
-print (sumatoria(num))
+alumno = {
+    "nombre": "Juan",
+    "edad": 22,
+    "carrera": "IA"
+}
 
-n= int(input("numero del factorial: "))
-print(factorial(n))
+# Acceso directo de alta velocidad referenciando la clave nominal como índice
+print(alumno["nombre"])  # Retorna el objeto asociado: "Juan"
+
+# Inserción o actualización dinámica de un par clave-valor
+alumno["edad"] = 23      # Modifica el valor de la clave existente
+alumno["sucursal"] = 1   # Inserta una clave nueva en el mapa de datos
+
+# Recorrido especializado abstrayendo los pares mediante el método .items()
+for clave, valor in alumno.items():
+    print(f"Clave de campo: {clave} : {valor}")
